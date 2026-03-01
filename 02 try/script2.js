@@ -1,0 +1,16 @@
+// only need to register ScrollTrigger once
+gsap.registerPlugin(ScrollTrigger);
+
+// animate h1 with a scroll trigger (note lowercase property name)
+gsap.to(".page2 h1", {
+    transform: "translateX(-40%)",
+    scrollTrigger: {
+        trigger: ".page2",
+        scroller: "body",
+         markers: true,
+            start: "top 0%",
+            end: "top -100%",
+            scrub: 2,
+            pin: true
+    }
+})
